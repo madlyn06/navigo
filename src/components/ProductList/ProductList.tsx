@@ -44,10 +44,6 @@ const all = [
     image: nhaDamYenChai
   },
   {
-    name: 'Nước tăng lực Báo Trắng',
-    image: tangLucChai
-  },
-  {
     name: 'Nước trà chanh mật ong',
     image: leMonChai
   }
@@ -80,10 +76,6 @@ const water = [
   {
     name: 'Nước nha đam yến',
     image: nhaDamYenChai
-  },
-  {
-    name: 'Nước tăng lực Báo Trắng',
-    image: tangLucChai
   },
   {
     name: 'Nước trà chanh mật ong',

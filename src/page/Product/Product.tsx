@@ -15,43 +15,48 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 const initialState = [
   {
     name: 'Bia báo trắng',
-    image: biaImg
+    image: biaImg,
+    slug: 'bia-bao-trang'
   },
   {
     name: 'Nước bí đao',
-    image: biDaoLon
+    image: biDaoLon,
+    slug: 'nuoc-bi-dao'
   },
   {
     name: 'Nước cam ép',
-    image: camEpLon
+    image: camEpLon,
+    slug: 'nuoc-cam-ep'
   },
   {
     name: 'Nước dưa lưới',
-    image: duaLuoiChai
+    image: duaLuoiChai,
+    slug: 'nuoc-dua-luoi'
   },
   {
     name: 'Nước dừa nha đam',
-    image: duaNhaDamChai
+    image: duaNhaDamChai,
+    slug: 'nuoc-dua-nha-dam'
   },
   {
     name: 'Nước hồng trà đào',
-    image: hongTraDaoChai
+    image: hongTraDaoChai,
+    slug: 'nuoc-hong-tra-dao'
   },
   {
     name: 'Nước me ép',
-    image: meEpChai
+    image: meEpChai,
+    slug: 'nuoc-me-ep'
   },
   {
     name: 'Nước nha đam yến',
-    image: nhaDamYenChai
+    image: nhaDamYenChai,
+    slug: 'nuoc-nha-dam-yen'
   },
   {
-    name: 'Nước tăng lực Báo Trắng',
-    image: tangLucChai
-  },
-  {
-    name: 'Nước bí đao',
-    image: biDaoLon
+    name: 'Nước trà chanh mật ong',
+    image: leMonChai,
+    slug: 'nuoc-tra-chanh-mat-ong'
   }
 ]
 export default function Product() {
@@ -85,15 +90,15 @@ export default function Product() {
               </ul>
             </div>
             <div className='col-span-3'>
-              <div className='grid grid-cols-3'>
+              <div className='grid grid-cols-3 gap-3'>
                 {id === 'all' &&
                   product.map((item) => (
-                    <div className='col-span-1'>
+                    <Link to={`/san-pham/${item.slug}`} className='col-span-1'>
                       <div className='lg:h-[277px] w-full max-sm:h-[110px]'>
                         <img src={item.image} alt='' className='w-full h-full object-contain' />
                       </div>
                       <p className='text-center max-sm:text-[15px]'>{item.name}</p>
-                    </div>
+                    </Link>
                   ))}
                 {id === 'beer' && <Beer />}
                 {id === 'water' && <Water />}
@@ -120,16 +125,18 @@ export default function Product() {
               <li className=' hover:text-[#004299] cursor-pointer'>OEM</li>
             </ul>
             <div className='col-span-3'>
-              <div className='grid grid-cols-3'>
-                {id === 'all' &&
-                  product.map((item) => (
-                    <div className='col-span-1'>
-                      <div className='lg:h-[277px] w-full max-sm:h-[110px]'>
-                        <img src={item.image} alt='' className='w-full h-full object-contain' />
-                      </div>
-                      <p className='text-center max-sm:text-[15px]'>{item.name}</p>
-                    </div>
-                  ))}
+              <div className='grid grid-cols-3 gap-3'>
+                <>
+                  {id === 'all' &&
+                    product.map((item) => (
+                      <Link to={`/san-pham/${item.slug}`} className='col-span-1'>
+                        <div className='lg:h-[277px] w-full max-sm:h-[110px]'>
+                          <img src={item.image} alt='' className='w-full h-full object-contain' />
+                        </div>
+                        <p className='text-center max-sm:text-[15px]'>{item.name}</p>
+                      </Link>
+                    ))}
+                </>
                 {id === 'beer' && <Beer />}
                 {id === 'water' && <Water />}
               </div>

@@ -60,9 +60,10 @@ export default function ViewMain() {
             </div>
             <div className='lg:col-span-4 max-sm:col-span-1'>
               <p className='text-[#222f6e] line-clamp-4 lg:text-base max-sm:text-[13px]'>
-                Lấy cảm hứng từ thành phần thiên nhiên phong phú từ khắp nơi trên đất nước, chúng tôi đã nghiên cứu và
-                phát triển sản xuất các sản phẩm đồ uống có chất lượng và hương vị tự nhiên, bổ dưỡng, cung cấp đồ uống
-                nhu cầu của người tiêu dùng Việt Nam.
+                Chúng tôi sở hữu hơn 26 nhãn hiệu thực phẩm thơm ngon và các thức uống giàu năng lượng, 2 nhà máy sản
+                xuất đạt chuẩn quốc tế và 500 nhân viên không ngừng cống hiến mỗi ngày. Nhiều năm hoạt động tại thị
+                trường Việt Nam, đến nay Phú Thái Sơn đã và đang không ngừng cải tiến công nghệ, giữ vững vị trí tiên
+                phong trong ngành sản xuất hàng tiêu dùng tại Việt Nam.
               </p>
               <div className='flex gap-1 justify-center mt-4 items-center cursor-pointer'>
                 <p className='text-base max-sm:text-[13px]' onClick={() => navigate('/about')}>
