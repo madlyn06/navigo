@@ -12,6 +12,7 @@ import tangLucChai from '../../assets/water/tanglucchai.jpg'
 import Beer from 'src/components/ProductList/Beer'
 import Water from 'src/components/ProductList/Water'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 const initialState = [
   {
     name: 'Bia báo trắng',
@@ -60,6 +61,7 @@ const initialState = [
   }
 ]
 export default function Product() {
+  const { t, i18n } = useTranslation()
   const [product, setProduct] = useState(initialState)
   const [status, setStatus] = useState('all')
   const navigation = useNavigate()
@@ -70,21 +72,21 @@ export default function Product() {
         <div className='border-t mb-4'>
           <div className='lg:grid max-sm:hidden grid-cols-4 gap-4 mt-8 ml-4'>
             <div className='col-span-1'>
-              <h1 className='uppercase text-xl font-bold'>Danh mục sản phẩm</h1>
+              <h1 className='uppercase text-xl font-bold'>{t('list')}</h1>
               <ul className='mt-4'>
                 <Link
                   to='/product/beer'
                   className='border-b block mt-3 mb-3 pb-2 hover:text-[#004299] cursor-pointer'
                   onClick={() => setStatus('beer')}
                 >
-                  Bia
+                  {t('beer')}
                 </Link>
                 <Link
                   to='/product/water'
                   className='border-b block mt-3 mb-3 pb-2 hover:text-[#004299] cursor-pointer'
                   onClick={() => setStatus('beer')}
                 >
-                  Nước giải khát
+                  {t('water')}
                 </Link>
                 <li className=' hover:text-[#004299] cursor-pointer'>OEM</li>
               </ul>
@@ -106,21 +108,21 @@ export default function Product() {
             </div>
           </div>
           <div className='lg:hidden max-sm:block'>
-            <h1 className='uppercase text-base font-bold mt-4'>Danh mục sản phẩm</h1>
+            <h1 className='uppercase text-base font-bold mt-4'>{t('list')}</h1>
             <ul className='mt-4'>
               <Link
                 to='/product/beer'
                 className='border-b block mt-3 mb-3 pb-2 hover:text-[#004299] cursor-pointer'
                 onClick={() => setStatus('beer')}
               >
-                Bia
+                {t('beer')}
               </Link>
               <Link
                 to='/product/water'
                 className='border-b block mt-3 mb-3 pb-2 hover:text-[#004299] cursor-pointer'
                 onClick={() => setStatus('beer')}
               >
-                Nước giải khát
+                {t('water')}
               </Link>
               <li className=' hover:text-[#004299] cursor-pointer'>OEM</li>
             </ul>

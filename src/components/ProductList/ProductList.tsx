@@ -10,6 +10,7 @@ import leMonChai from '../../assets/water/lemonchai.jpg'
 import meEpChai from '../../assets/water/meepchai.jpg'
 import nhaDamYenChai from '../../assets/water/nhadamyenchai.jpg'
 import tangLucChai from '../../assets/water/tanglucchai.jpg'
+import { useTranslation } from 'react-i18next'
 const all = [
   {
     name: 'Bia báo trắng',
@@ -89,6 +90,7 @@ const beer = [
   }
 ]
 export default function ProductList() {
+  const { t, i18n } = useTranslation()
   const [status, setStatus] = React.useState<'all' | 'water' | 'beer'>('all')
   return (
     <div className='mx-auto max-w-[1200px] px-4 my-8'>
@@ -100,7 +102,7 @@ export default function ProductList() {
           })}
           onClick={() => setStatus('all')}
         >
-          Tất cả
+          {t('allText')}
         </li>
         <li
           className={classNames('px-3 py-2 rounded-[25px] max-sm:text-[15px]', {
@@ -109,7 +111,7 @@ export default function ProductList() {
           })}
           onClick={() => setStatus('water')}
         >
-          Nước giải khát
+          {t('waterText')}
         </li>
         <li
           className={classNames('px-3 py-2 rounded-[25px] max-sm:text-[15px]', {
@@ -118,7 +120,7 @@ export default function ProductList() {
           })}
           onClick={() => setStatus('beer')}
         >
-          Bia
+          {t('beerText')}
         </li>
       </ul>
       {status === 'all' && (
