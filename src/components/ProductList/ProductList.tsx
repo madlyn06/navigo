@@ -14,79 +14,97 @@ import { useTranslation } from 'react-i18next'
 const all = [
   {
     name: 'Bia báo trắng',
-    image: biaImg
+    image: biaImg,
+    nameEng: 'White newspaper beer'
   },
   {
     name: 'Nước bí đao',
-    image: biDaoLon
+    image: biDaoLon,
+    nameEng: 'Water melon'
   },
   {
     name: 'Nước cam ép',
-    image: camEpLon
+    image: camEpLon,
+    nameEng: 'Orange juice'
   },
   {
     name: 'Nước dưa lưới',
-    image: duaLuoiChai
+    image: duaLuoiChai,
+    nameEng: 'Cantaloupe juice'
   },
   {
     name: 'Nước dừa nha đam',
-    image: duaNhaDamChai
+    image: duaNhaDamChai,
+    nameEng: 'Aloe vera coconut water'
   },
   {
     name: 'Nước hồng trà đào',
-    image: hongTraDaoChai
+    image: hongTraDaoChai,
+    nameEng: 'Peach pink tea'
   },
   {
     name: 'Nước me ép',
-    image: meEpChai
+    image: meEpChai,
+    nameEng: 'Tamarind juice'
   },
   {
     name: 'Nước nha đam yến',
-    image: nhaDamYenChai
+    image: nhaDamYenChai,
+    nameEng: `Bird's nest aloe vera juice`
   },
   {
     name: 'Nước trà chanh mật ong',
-    image: leMonChai
+    image: leMonChai,
+    nameEng: 'Honey lemon tea'
   }
 ]
 const water = [
   {
     name: 'Nước bí đao',
-    image: biDaoLon
+    image: biDaoLon,
+    nameEng: 'Water melon'
   },
   {
     name: 'Nước cam ép',
-    image: camEpLon
+    image: camEpLon,
+    nameEng: 'Orange juice'
   },
   {
     name: 'Nước dưa lưới',
-    image: duaLuoiChai
+    image: duaLuoiChai,
+    nameEng: 'Cantaloupe juice'
   },
   {
     name: 'Nước dừa nha đam',
-    image: duaNhaDamChai
+    image: duaNhaDamChai,
+    nameEng: 'Aloe vera coconut water'
   },
   {
     name: 'Nước hồng trà đào',
-    image: hongTraDaoChai
+    image: hongTraDaoChai,
+    nameEng: 'Peach pink tea'
   },
   {
     name: 'Nước me ép',
-    image: meEpChai
+    image: meEpChai,
+    nameEng: 'Tamarind juice'
   },
   {
     name: 'Nước nha đam yến',
-    image: nhaDamYenChai
+    image: nhaDamYenChai,
+    nameEng: `Bird's nest aloe vera juice`
   },
   {
     name: 'Nước trà chanh mật ong',
-    image: leMonChai
+    image: leMonChai,
+    nameEng: 'Honey lemon tea'
   }
 ]
 const beer = [
   {
     name: 'Bia báo trắng',
-    image: biaImg
+    image: biaImg,
+    nameEng: 'White newspaper beer'
   }
 ]
 export default function ProductList() {
@@ -130,7 +148,7 @@ export default function ProductList() {
               <div className='h-[277px] w-full'>
                 <img src={_.image} alt='' className='w-full h-full object-contain' />
               </div>
-              <p className='text-center max-sm:text-[15px]'>{_.name}</p>
+              <p className='text-center max-sm:text-[15px]'>{i18n.language === 'vn' ? `${_.name}` : `${_.nameEng}`}</p>
             </div>
           ))}
         </div>
@@ -142,7 +160,7 @@ export default function ProductList() {
               <div className='h-[277px] w-full'>
                 <img src={_.image} alt='' className='w-full h-full object-contain' />
               </div>
-              <p className='text-center max-sm:text-[15px]'>{_.name}</p>
+              <p className='text-center max-sm:text-[15px]'>{i18n.language === 'vn' ? `${_.name}` : `${_.nameEng}`}</p>
             </div>
           ))}
         </div>
@@ -154,7 +172,7 @@ export default function ProductList() {
               <div className='h-[277px] w-full'>
                 <img src={_.image} alt='' className='w-full h-full object-contain' />
               </div>
-              <p className='text-center max-sm:text-[15px]'>{_.name}</p>
+              <p className='text-center max-sm:text-[15px]'>{i18n.language === 'vn' ? `${_.name}` : `${_.nameEng}`}</p>
             </div>
           ))}
         </div>

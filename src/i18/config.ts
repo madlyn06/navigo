@@ -62,7 +62,7 @@ i18n.use(initReactI18next).init({
             "description2":"Lấy cảm hứng từ thành phần thiên nhiên phong phú từ khắp nơi trên đất nước, chúng tôi đã nghiên cứu và phát triển sản xuất các sản phẩm đồ uống có chất lượng và hương vị tự nhiên, bổ dưỡng, cung cấp đồ  phù hợp với nhu cầu của người tiêu dùng Việt Nam.",
             'description3': 'Chúng tôi sở hữu hơn 26 nhãn hiệu thực phẩm thơm ngon và các thức uống giàu năng lượng, 2 nhà máy sản xuất đạt chuẩn quốc tế và 500 nhân viên không ngừng cống hiến mỗi ngày. Nhiều năm hoạt động tại thị trường Việt Nam, đến nay Phú Thái Sơn đã và đang không ngừng cải tiến công nghệ, giữ vững vị trí tiên phong trong ngành sản xuất hàng tiêu dùng tại Việt Nam.',
             'more':"Xem thêm",
-            'productHeading':'Product',
+            'productHeading':'Sản phẩm',
             'exp':"Với hơn 20 năm kinh nghiệm sản xuất và phân phối",
             "provide": "Chúng tôi cung cấp đa dạng các nhãn hiệu nước ép trái cây, nước tăng lực, bia",
             'allText':"Tất cả",
