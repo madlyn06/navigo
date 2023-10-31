@@ -67,7 +67,7 @@ i18n.use(initReactI18next).init({
             "provide": "Chúng tôi cung cấp đa dạng các nhãn hiệu nước ép trái cây, nước tăng lực, bia",
             'allText':"Tất cả",
             'beerText':"Bia",
-            'waterText':"Núc giải khát",
+            'waterText':"Nước giải khát",
             'nameCty':'Công ty cổ phần Sản xuất và Xuất nhập khẩu NAVIGO',
             'headOffice': "Trụ sở chính: ",
             'address': " Nhà số 545, đường số 8, Thôn Sáp Mai, Võng La, Đông Anh, Hà Nội",
